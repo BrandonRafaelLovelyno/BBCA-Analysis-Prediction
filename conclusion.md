@@ -21,7 +21,7 @@ The preceeding approach is used for it's _ability_ to account annual patern such
 
 ### 1. Annual Price Prediction with Book Value Growth
 
-As can be seen from _/analysis/book-value-growth-to-price.ipynb_, it can infered that the 3 year book value growth is the best prediction with MAE of 8,1%
+As what can be seen from _/analysis/book-value-growth-to-price.ipynb_, it can infered that the 3 year book value growth is the best prediction with MAE of 8,1%
 
 Therefore, with this foundings, **the 3 year book value growth will be used in this finding**
 
@@ -29,7 +29,7 @@ Therefore, with this foundings, **the 3 year book value growth will be used in t
 
 #### 2.1 The future price progress is equal to past data progress
 
-As can be seen from _/analysis/monthly-progress-by-book-value.ipynb/mean_, **using the 3 years PBV prediction**, below error would be yield using below interval prediction
+As what can be seen from _/analysis/monthly-progress-by-book-value.ipynb/2.1_, **using the 3 years PBV prediction**, below error would be yield using below interval prediction
 
 2 Error 0.082194
 3 Error 0.074152
@@ -40,8 +40,15 @@ It could be seen that the future price progress could not be predicted accuratel
 
 #### 2.2 The future price progress is **proportionally** slower or faster to past data progress
 
-<!-- state the correlation coefficient of real progress with 5 years progress mean -->
+As what can be seen from _/analysis/monthly-progress-by-book-value.ipynb/2.2_, we yield below correlation data
 
-#### 2.3 The future price progress is **just** slower or faster to past data progress
+- Correlation between Progress and 2 Mean
+  0.11281834412521277
+- Correlation between Progress and 3 Mean
+  0.1784384698247065
+- Correlation between Progress and 4 Mean
+  0.08513449202465924
+- Correlation between Progress and 5 Mean
+  0.32482617198880026
 
-<!-- use the progress absolute difference -->
+Explaining preceeding data, it could be inferred that **the future price progress has weak correlation with past years data**
