@@ -1,25 +1,47 @@
-# 1. Book Value Growth to Price
+# BBCA Monthly Prediction
 
-As we can see from _/analysis/book-value-growth-to-price.ipynb_, we can infer that the 3 year book value growth is the best prediction with MAE of 8,1%
+The goal of this repository is to find accurate prediction of BBCA future price in a scale of month
 
-**Therefore, with this foundings, the 3 year book value growth will be used in this finding**
+This goal will be achieved by using the following steps :
 
-# 2. Monthly Progress by Book Value
+- Find the best **anual** prediction
+- Find the best month _progress_ prediction
 
-As we can see from _/analysis/monthly-progress-by-book-value.ipynb_, we could see that using different time interval would yield different progress mean
+Word _progress_ could be used as the followings :
+If the 2024 annual price value prediction is 10.000 and the 2024 Feb price value is 9900, then the price _progress_ in Feb 2024 is 0.99
 
-Month 2014 2017
-1 0.871269 0.890891
-2 0.891620 0.906478
-3 0.881210 0.885344
-4 0.906517 0.914775
-5 0.900617 0.911699
-6 0.881482 0.889714
-7 0.897911 0.900157
-8 0.927292 0.934079
-9 0.932053 0.939477
-10 0.959443 0.959753
-11 0.979435 0.992403
-12 0.990799 1.007348
+The preceeding approach is used for it's _ability_ to account annual patern such as :
 
-**Therefore, in finding the suitable Monthly Progress Prediction, it is essential to find the most suitable year interval**
+- BBCA revenue report release month
+- BBCA dividend month
+- BBCA market behavior pattern such as :
+  - Sell in May and go away
+  - Santa Claus rally
+- BBCA monthly growth rate
+
+### 1. Annual Price Prediction with Book Value Growth
+
+As can be seen from _/analysis/book-value-growth-to-price.ipynb_, it can infered that the 3 year book value growth is the best prediction with MAE of 8,1%
+
+Therefore, with this foundings, **the 3 year book value growth will be used in this finding**
+
+### 2. Monthly Progress Prediction with Past Mean
+
+#### 2.1 The future price progress is equal to past data progress
+
+As can be seen from _/analysis/monthly-progress-by-book-value.ipynb/mean_, **using the 3 years PBV prediction**, below error would be yield using below interval prediction
+
+2 Error 0.082194
+3 Error 0.074152
+4 Error 0.073283
+5 Error 0.069028
+
+It could be seen that the future price progress could not be predicted accurately with past years data
+
+#### 2.2 The future price progress is **proportionally** slower or faster to past data progress
+
+<!-- state the correlation coefficient of real progress with 5 years progress mean -->
+
+#### 2.3 The future price progress is **just** slower or faster to past data progress
+
+<!-- use the progress absolute difference -->
