@@ -21,6 +21,8 @@ The preceeding approach is used for it's _ability_ to account annual patern such
 
 ### 1. Annual Price Prediction with Book Value Growth
 
+Blue chip companies, including BBCA, are known for their stable growth, **including their book value**. With this stability assumption, the book value growth will be used as a predictor in this repository
+
 As what can be seen from _/analysis/book-value-growth-to-price.ipynb_, it can infered that the 3 year book value growth is the best prediction with MAE of 8,1%
 
 Therefore, with this foundings, **the 3 year book value growth will be used in this finding**
@@ -52,3 +54,9 @@ As what can be seen from _/analysis/monthly-progress-by-book-value.ipynb/2.2_, w
   0.32482617198880026
 
 Explaining preceeding data, it could be inferred that **the future price progress has weak correlation with past years data**
+
+With this findings, it could be infered that **prediction alone by book value growth is not enough to predict the future price progress**
+
+### 3. Exchange Rate Impact to Prediction
+
+The idea is the exchange rate, which is the USD to IDR exchange rate, could adjust the prediction so that the prediction could yield less error
