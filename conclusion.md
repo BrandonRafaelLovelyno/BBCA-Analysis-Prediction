@@ -38,11 +38,22 @@ As what can be seen from _/analysis/monthly-progress-by-book-value.ipynb/2.1_, *
 4 Error 0.073283
 5 Error 0.069028
 
-It could be seen that the future price progress could not be predicted accurately with past years data
+It could be seen that the future price progress deviates by noticable error from past years data
+
+However, there is an important finding here. With the following data, It can be seen that the error has a **decent value of auto correlation**, giving the idea that the (n+1) month error could be lessen by using the n month error
+
+- Auto-correlation at lag 1
+  0.8107538057634408
+
+- Auto-correlation at lag 2
+  0.6505485578362517
+
+- Auto-correlation at lag 3
+  0.47869674654100686
 
 #### 2.2 The future price progress is **proportionally** slower or faster to past data progress
 
-As what can be seen from _/analysis/monthly-progress-by-book-value.ipynb/2.2_, we yield below correlation data
+As what can be seen from _/analysis/monthly-progress-by-book-value.ipynb/2.2_, below correlation would be yield
 
 - Correlation between Progress and 2 Mean
   0.11281834412521277
@@ -60,3 +71,22 @@ With this findings, it could be infered that **prediction alone by book value gr
 ### 3. Exchange Rate Impact to Prediction
 
 The idea is the exchange rate, which is the USD to IDR exchange rate, could adjust the prediction so that the prediction could yield less error
+
+As what can be seen from _/analysis/exchange-rate-impact-to-prediction.ipynb_, below correlation would be yield
+
+The correlation between the price of the stock and the dollar
+0.8569405888871475
+
+Correlation between Dollar Difference and 2 Error
+0.15188777387659264
+
+Correlation between Dollar Difference and 3 Error
+0.18525925742884466
+
+Correlation between Dollar Difference and 4 Error
+0.1522413961860319
+
+Correlation between Dollar Difference and 5 Error
+0.2092657170069175
+
+With preceeding data, **it is true that the dollar price have decent impact on BBCA stock price**. Sadly, the dollar difference could not be used to adjust monthly progress prediction. In other word, **the dollar difference is not the primary cause of monthly progress**
