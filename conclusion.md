@@ -33,10 +33,10 @@ Therefore, with this foundings, **the 3 year book value growth will be used in t
 
 As what can be seen from _/analysis/monthly-progress-by-book-value.ipynb/2.1_, **using the 3 years PBV prediction**, below error would be yield using below interval prediction
 
-2 Error 0.082194
-3 Error 0.074152
-4 Error 0.073283
-5 Error 0.069028
+2 Error 0.075838
+3 Error 0.053281
+4 Error 0.061991
+5 Error 0.058866
 
 It could be seen that the future price progress deviates by noticable error from past years data
 
