@@ -36,6 +36,8 @@ As what can be seen from _/analysis/monthly-progress-by-book-value.ipynb/2.1_, *
 4 Error 0.067519
 5 Error 0.062234
 
+its important to know that the preceeding error mean is the mean of the cleaned absolute error. **There is a total of 4 outliers of 420 data**
+
 It could be seen that the future price progress deviates by noticable error from past years data
 
 However, there is an important finding here. With the following data, It can be seen that the error has a **decent value of auto correlation**, giving the idea that the (n+1) month error could be lessen by using the n month error
@@ -49,19 +51,16 @@ However, there is an important finding here. With the following data, It can be 
 - Auto-correlation at lag 3
   0.46474117675379967
 
-With preceeding findings, the following is the prediction error with applying autoregressive on error :
+With removing a total of 30 outliers of 348 autoregressive data, the following is the prediction error with applying autoregressive on error :
 
-- AR 2 Mean Error
-  0.04859812719607783
-
-- AR 3 Mean Error
-  0.04401055709628309
-
-- AR 4 Mean Error
-  0.043565149283736414
-
-- AR 5 Mean Error
-  0.03984880776503023
+- AR 2 Mean Error  
+  0.035164
+- AR 3 Mean Error  
+  0.031701
+- AR 4 Mean Error  
+  0.030989
+- AR 5 Mean Error  
+  0.029067
 
 ### 3. Exchange Rate Impact to Prediction
 
