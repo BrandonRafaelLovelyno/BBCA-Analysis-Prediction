@@ -33,23 +33,23 @@ Therefore, with this foundings, **the 3 year book value growth will be used in t
 
 As what can be seen from _/analysis/monthly-progress-by-book-value.ipynb/2.1_, **using the 3 years PBV prediction**, below error would be yield using below interval prediction
 
-2 Error 0.075838
-3 Error 0.053281
-4 Error 0.061991
-5 Error 0.058866
+2 Error 0.088046
+3 Error 0.065405
+4 Error 0.065833
+5 Error 0.067642
 
 It could be seen that the future price progress deviates by noticable error from past years data
 
 However, there is an important finding here. With the following data, It can be seen that the error has a **decent value of auto correlation**, giving the idea that the (n+1) month error could be lessen by using the n month error
 
 - Auto-correlation at lag 1
-  0.8107538057634408
+  0.7789570004880233
 
 - Auto-correlation at lag 2
-  0.6505485578362517
+  0.6114282272954328
 
 - Auto-correlation at lag 3
-  0.47869674654100686
+  0.45462119155606423
 
 #### 2.2 The future price progress is **proportionally** slower or faster to past data progress
 
