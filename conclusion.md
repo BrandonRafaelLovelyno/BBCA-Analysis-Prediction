@@ -29,44 +29,39 @@ Therefore, with this foundings, **the 3 year book value growth will be used in t
 
 ### 2. Monthly Progress Prediction with Past Mean
 
-#### 2.1 The future price progress is equal to past data progress
-
 As what can be seen from _/analysis/monthly-progress-by-book-value.ipynb/2.1_, **using the 3 years PBV prediction**, below error would be yield using below interval prediction
 
-2 Error 0.088046
-3 Error 0.065405
-4 Error 0.065833
-5 Error 0.067642
+2 Error 0.073284
+3 Error 0.064645
+4 Error 0.067519
+5 Error 0.062234
 
 It could be seen that the future price progress deviates by noticable error from past years data
 
 However, there is an important finding here. With the following data, It can be seen that the error has a **decent value of auto correlation**, giving the idea that the (n+1) month error could be lessen by using the n month error
 
 - Auto-correlation at lag 1
-  0.7789570004880233
+  0.7992789277950236
 
 - Auto-correlation at lag 2
-  0.6114282272954328
+  0.613044660751285
 
 - Auto-correlation at lag 3
-  0.45462119155606423
+  0.46474117675379967
 
-#### 2.2 The future price progress is **proportionally** slower or faster to past data progress
+With preceeding findings, the following is the prediction error with applying autoregressive on error :
 
-As what can be seen from _/analysis/monthly-progress-by-book-value.ipynb/2.2_, below correlation would be yield
+- AR 2 Mean Error
+  0.04859812719607783
 
-- Correlation between Progress and 2 Mean
-  0.11281834412521277
-- Correlation between Progress and 3 Mean
-  0.1784384698247065
-- Correlation between Progress and 4 Mean
-  0.08513449202465924
-- Correlation between Progress and 5 Mean
-  0.32482617198880026
+- AR 3 Mean Error
+  0.04401055709628309
 
-Explaining preceeding data, it could be inferred that **the future price progress has weak correlation with past years data**
+- AR 4 Mean Error
+  0.043565149283736414
 
-With this findings, it could be infered that **prediction alone by book value growth is not enough to predict the future price progress**
+- AR 5 Mean Error
+  0.03984880776503023
 
 ### 3. Exchange Rate Impact to Prediction
 
@@ -90,3 +85,5 @@ Correlation between Dollar Difference and 5 Error
 0.2092657170069175
 
 With preceeding data, **it is true that the dollar price have decent impact on BBCA stock price**. Sadly, the dollar difference could not be used to adjust monthly progress prediction. In other word, **the dollar difference is not the primary cause of monthly progress**
+
+### 4. Testing profitability of prediction
