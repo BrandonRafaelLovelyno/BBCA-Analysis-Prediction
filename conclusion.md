@@ -62,6 +62,11 @@ With removing a total of 30 outliers of 348 autoregressive data, the following i
 - AR 5 Mean Error  
   0.029067
 
+With testing the profitability of the prediction, it can be seen that the prediction is profitable with the following data :
+
+With a profit of 1.6 % per transaction, there is 329 profitable day of 1710 days.
+The mean of profit waiting day is 1.0 day
+
 ### 3. Exchange Rate Impact to Prediction
 
 The idea is the exchange rate, which is the USD to IDR exchange rate, could adjust the prediction so that the prediction could yield less error
