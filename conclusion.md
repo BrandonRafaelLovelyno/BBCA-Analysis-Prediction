@@ -62,10 +62,13 @@ With removing a total of 30 outliers of 348 autoregressive data, the following i
 - AR 5 Mean Error  
   0.029067
 
-With testing the profitability of the prediction, it can be seen that the prediction is profitable with the following data :
+To support further analysis, the following stats could be yield:
 
-With a profit of 1.6 % per transaction, there is 329 profitable day of 1710 days.
-The mean of profit waiting day is 1.0 day
+- daily difference mean
+  0.31%
+
+- monthly deviation mean from mean
+  2.167%
 
 ### 3. Exchange Rate Impact to Prediction
 
