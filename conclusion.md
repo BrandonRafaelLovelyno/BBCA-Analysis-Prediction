@@ -62,14 +62,6 @@ With removing a total of 30 outliers of 348 autoregressive data, the following i
 - AR 5 Mean Error  
   0.029067
 
-To support further analysis, the following stats could be yield:
-
-- daily difference mean
-  0.31%
-
-- monthly deviation mean from mean
-  2.167%
-
 ### 3. Exchange Rate Impact to Prediction
 
 The idea is the exchange rate, which is the USD to IDR exchange rate, could adjust the prediction so that the prediction could yield less error
@@ -93,4 +85,22 @@ Correlation between Dollar Difference and 5 Error
 
 With preceeding data, **it is true that the dollar price have decent impact on BBCA stock price**. Sadly, the dollar difference could not be used to adjust monthly progress prediction. In other word, **the dollar difference is not the primary cause of monthly progress**
 
-### 4. Testing profitability of prediction
+### 4. Monthly trading strategy
+
+Before diving deeper, **it has to be accepted that the market is too complex to be predicted by book value growth**. Numerous factors such as The Federal Reserve, The Bank of Indonesia, and the market sentiment could affect the stock price in a short term. Therefore, the following strategy could be used to predict the monthly price :
+
+- The prediction base : the 5 AR Mean Prediction
+
+- The prediction tolerance : With integrating the market condition, the month mean could be adjusted by abs(0.29%)
+
+- The daily price standard deviation of mean : abs(2.1%)
+
+- The price difference mean : abs(0.31%)
+
+With the preceeding strategy and the following assumption:
+
+- User cannot buy more stocks before selling the stocks
+- User cannot sell more stocks before buying the stocks
+- The buy and sell have to occur on different days
+
+there is 145.0 profit day of 1789 days. In other words, **the strict and heuristic strategy would yield +- 3% in a month**
